@@ -206,6 +206,56 @@ Example: calculateGrade(100) should return A.
 Complete the exercise in the space below:
 */
 
-const calculateGrade = () => {
-    
+const calculateGrade = (a) => {
+    if (a >= 90) {
+        return 'A'
+    } else if (a >= 80 ) {
+        return 'B'
+    } else if (a >= 70 ) {
+        return 'C'
+    } else if (a >= 60 ) {
+        return 'D'
+    } else return F
 }
+console.log('Exercise 10 Result:', calculateGrade(85));
+
+/*
+Exercise 11: createUsername()
+
+Define a function called createUsername. 
+It should take a first name and a last name and return a username. 
+
+The username should be a combination of the following:
+- The first three letters of the first name.
+- The first three letters of the last name.
+- The total character count of the first and last name combined.
+
+Example: createUsername('Samantha', 'Green') should return 'SamGre13'.
+
+Complete the exercise in the space below:
+*/
+
+function createUsername(a,b){
+    const aSplit = a.split("");
+    const bSplit = b.split("");
+
+    const username= `${aSplit.slice(0,3).join("")}${bSplit.slice(0,3).join("")}${a.length+b.length}`;
+    console.log(username)
+}
+
+createUsername('jamie','everett');
+
+/*
+Exercise 12: numArgs()
+
+Challenge yourself with numArgs. 
+This function should return the count of arguments passed to it when called.
+
+Complete the exercise in the space below:
+*/
+
+function numArgs(...a) { 
+    return (a).length
+}
+
+console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4));
